@@ -74,5 +74,20 @@ p users ["Erik"] [:lottery_numbers]
 # 8. Change Erik's hometown to Edinburgh
 p users ["Erik"] [:home_town] = "Edinburgh"
 # 9. Add a pet dog to Erik called "Fluffy"
-
+users ["Erik"] [:pets].unshift({:name => "Fluffy", :species => "dog"})
+p users
+#### *****why was it that unshift is the only one that worked***
 # 10. Add another person to the users hash
+
+ellie = {"Ellie" =>
+    {
+    :twitter => "Cassona08",
+    :lottery_numbers => [2, 8, 9, 24, 32, 35],
+    :home_town => "Berkhamsted",
+    :pets =>
+      [{:name => "Scooter",
+        :species => "cat"}]
+    }
+  }
+users.merge!(ellie)
+p users
