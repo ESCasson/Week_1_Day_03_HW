@@ -2,6 +2,7 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 
 # 1. Add `"Edinburgh Waverley"` to the end of the array
 stops.push("Edinburgh Waverley")
+## ***other solution stops << "Edinburgh Waverly"***
 #p stops
 # 2. Add `"Glasgow Queen St"` to the start of the array
 stops.unshift("Glasgow Queen St")
@@ -10,7 +11,7 @@ stops.unshift("Glasgow Queen St")
 stops.insert(4, "Polmont")
 #p stops
 # 4. Work out the index position of `"Linlithgow"`
-#p stops.index("Linlithgow")
+stops.index("Linlithgow")
 # 5. Remove `"Livingston"` from the array using its name
 stops.delete("Livingston")
 #p stops
@@ -23,6 +24,8 @@ p stops.length()
 # 8. How many ways can we return `"Falkirk High"` from the array?
 p stops[2]
 p stops.fetch(2)
+#stops.at(2)
+#stops.values_at(2).first()
 # 9. Reverse the positions of the stops in the array
 p stops.reverse
 # 10. Print out all the stops using a for loop
