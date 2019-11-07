@@ -89,5 +89,5 @@ ellie = {"Ellie" =>
         :species => "cat"}]
     }
   }
-users.merge!(ellie)
+users.merge(ellie)
 p users

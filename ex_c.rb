@@ -1,19 +1,19 @@
 united_kingdom = [
   {
-    name: "Scotland",
-    population: 5295000,
-    capital: "Edinburgh"
+    :name => "Scotland",
+    :population => 5295000,
+    :capital => "Edinburgh"
   },
   {
-    name: "Wales",
-    population: 3063000,
-    capital: "Swansea"
+    :name => "Wales",
+    :population => 3063000,
+  :capital => "Swansea"
   },
   {
-    name: "England",
-    population: 53010000,
-    capital: "London"
-  }
+    :name => "England",
+    :population => 53010000,
+    :capital => "London"
+  },
 ]
 
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
@@ -22,7 +22,37 @@ p united_kingdom
 
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array
 #(The capital is Belfast, and the population is 1,811,000).
-
+northern_ireland = [
+  {
+    :name => "Northern Ireland",
+    :population => 181100,
+    :capital => "Belfast"
+  },
+]
+#p northern_ireland
+united_kingdom.concat(northern_ireland)
+p united_kingdom
 
 # 3. Use a loop to print the names of all the countries in the UK.
+
+
+chickens = [
+  { name: "Margaret", age: 2, eggs: 0 },
+  { name: "Hetty", age: 1, eggs: 2 },
+  { name: "Henrietta", age: 3, eggs: 1 },
+  { name: "Audrey", age: 2, eggs: 0 },
+  { name: "Mabel", age: 5, eggs: 1 },
+]
+
+for place in united_kingdom
+  p "#{place[:name]}"
+end
 # 4. Use a loop to find the total population of the UK.
+
+total_population = 0
+
+for place in united_kingdom
+  total_population += place[:population]
+end
+
+p total_population
